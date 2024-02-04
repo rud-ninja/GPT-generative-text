@@ -19,10 +19,21 @@ The Wikitext-2 dataset is a valuable resource in the field of natural language p
 </br>
 
 ## Transformers and their advantage over RNN and LSTM
+
+<p align="center">
+  <img src="https://github.com/rud-ninja/GPT-generative-text/blob/main/images/rnn%2Blstm.png" alt="rnn+lstm" width="70%">
+</p>
+
+
 Transformers represent a paradigm shift in natural language processing (NLP) and language modelling, presenting distinct advantages over traditional recurrent neural networks (RNNs) and long short-term memory networks (LSTMs). Unlike RNNs and LSTMs, transformers leverage a self-attention mechanism, enabling them to capture long-range dependencies and contextual information more effectively. This attention mechanism allows transformers to process input sequences in parallel, making them highly scalable and efficient in handling sequential data. Additionally, transformers excel in capturing contextual information, as they consider the entire input sequence simultaneously rather than relying on sequential processing. This characteristic is particularly advantageous for language modelling tasks, where understanding context is crucial for generating coherent and contextually relevant text.
 
 
 Moreover, transformers have demonstrated superior performance in handling variable-length sequences, mitigating the vanishing gradient problem that can hinder the training of RNNs and LSTMs. The self-attention mechanism in transformers enables them to assign different weights to different parts of the input sequence dynamically, allowing for more effective information retention and utilization.
+
+
+<p align="center">
+  <img src="https://github.com/rud-ninja/GPT-generative-text/blob/main/images/transformer_architecture.jpg" alt="transformer_architecture" width="40%">
+</p>
 
 
 The attention mechanism in transformers also facilitates better modelling of relationships between words and contextual nuances, resulting in improved language understanding and generation. This has led to the widespread adoption of transformer-based models, such as BERT (Bidirectional Encoder Representations from Transformers) and GPT (Generative Pre-trained Transformer), which have achieved state-of-the-art results in various NLP tasks.
@@ -31,6 +42,11 @@ The attention mechanism in transformers also facilitates better modelling of rel
 
 ## Decoder-only Transformer
 A decoder-only transformer refers to a modified version of the original transformer architecture that consists solely of the decoder component. In the standard transformer architecture, there are two main components: the encoder and the decoder. The encoder processes the input sequence, extracting relevant features, while the decoder generates the output sequence based on those features.
+
+
+<p align="center">
+  <img src="https://github.com/rud-ninja/GPT-generative-text/blob/main/images/deconlytransformer_architecture.jpg" alt="decoder_transformer" width="40%">
+</p>
 
 
 In a decoder-only transformer, the encoder component is omitted, and only the decoder is retained. This architecture is commonly used in tasks where the model is required to generate sequences autoregressively, such as language generation or sequence-to-sequence tasks where the output is generated step by step.
@@ -50,7 +66,7 @@ Tokenization and encoding methods are fundamental processes in natural language 
 In conclusion, we successfully developed an auto-regressive text generating model based on a decoder-only transformer trained on wikitext2 data. Despite the limitations of GPU resources from the free tier of online platforms, the model demonstrated the ability to approximate the English language. The cross-entropy loss was 2.16 on the test data and 1.99 on the training data. While acknowledging the room for improvement, this project highlights the effectiveness of transformer-based architectures in text generation tasks.
 
 
-Check the code [here]()
+Check the code [here](https://github.com/rud-ninja/GPT-generative-text/blob/main/codes/latest_wikitext_2_2.ipynb)
 
 
 Try the model! Generate some text with this [web application](http://indranuj.pythonanywhere.com/)
